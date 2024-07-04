@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection | Nostalgia Car Collection</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<body class="colectie-body">
+    <nav>
+        
+        <div class="logo">
+            <a href="index.html">
+				<img src="images/logobun.png" style="width: 100px; height: 70px;" alt="Logo">
+				<img src="images/alb2.png" style="width: 200px; height: 130px;" alt="Logo">
+			</a>
+        </div>
+        <ul class="nav-links">
+            <li><h1><a href="index.html">About Us</a></h1></li>
+            <li><h1><a href="colectie.html">Collection</a></h1></li>
+            <li><h1><a href="contact.html">Contact</a></h1></li>
+            <li id="favoritesTab"><h1><a href="fav.html">Favorites</a></h1></li>
+        </ul>
+        <div class="loginButton">
+			<span id="greeting" style="margin-right: 20px;"></span> <!-- Placeholder for greeting message -->
+            <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="loginButton">Login</button>
+        </div>
+    </nav>
+
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <div class="rectangle-collection">
+		<section id="featured-cars" class="featured-cars">
+			<div class="container">
+				<div class="section-header">
+					<h1 style="color: #ffff;">Featured Cars</h1>
+				</div><!--/.section-header-->
+				<div class="featured-cars-content">
+					<div class="row">
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+								  <div class="featured-cars-img">
+									<img src="images/fc1.png" alt="cars">
+								  </div>
+								  <div class="featured-model-info"></div>
+								</div>
+								<div class="featured-cars-txt">
+								  <a href="#">Ferrari Testarossa</a>
+								  <button id="favorite-btn" class="favorite-btn" data-car-id="carID1">Add to Favorites</button>
+								</div>
+							  </div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img">
+										<img src="images/fc2.png" alt="cars">
+									</div>
+									<div class="featured-model-info">
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+									<a href="#">Lamborghini Countach</span></a>
+									<button class="favorite-btn" data-car-id="carID2">Add to Favorites</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img">
+										<img src="images/fc3.png" alt="cars">
+									</div>
+									<div class="featured-model-info">
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+								<a href="#">Honda NSX</a>
+								<button class="favorite-btn" data-car-id="carID3">Add to Favorites</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img">
+										<img src="images/fc4.png" alt="cars">
+									</div>
+									<div class="featured-model-info">
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+									<a href="#">Cadillac Eldorado</a>
+									<button id="favorite-btn" class="favorite-btn" data-car-id="carID4">Add to Favorites</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img">
+										<img src="images/fc5.png" alt="cars">
+									</div>
+									<div class="featured-model-info">
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+								<a href="#">Dodge Charger</a>
+								<button id="favorite-btn" class="favorite-btn" data-car-id="carID5">Add to Favorites</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img">
+										<img src="images/fc6.png" alt="cars">
+									</div>
+									<div class="featured-model-info">
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+									<a href="#">Aston Martin<span> DB5</span></a>
+									<button id="favorite-btn" class="favorite-btn" data-car-id="carID6">Add to Favorites</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img">
+										<img src="images/fc7.png" alt="cars">
+									</div>
+									<div class="featured-model-info">
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+								<a href="#">Ford Mustang</a>
+								<button id="favorite-btn" class="favorite-btn" data-car-id="carID7">Add to Favorites</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img">
+										<img src="images/fc8.png" alt="cars">
+									</div>
+									<div class="featured-model-info">
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+									<a href="#">Rolls-Royce Phantom V</a>
+									<button id="favorite-btn" class="favorite-btn" data-car-id="carID8">Add to Favorites</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img">
+										<img src="images/fc9.png" alt="cars">
+									</div>
+									<div class="featured-model-info">
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+								<a href="#">Dacia <span>1310</a>
+								<button id="favorite-btn" class="favorite-btn" data-car-id="carID9">Add to Favorites</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img">
+										<img src="images/fc10.png" alt="cars">
+									</div>
+									<div class="featured-model-info">
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+								<a href="#">Porsche <span>911</a>
+									<button id="favorite-btn" class="favorite-btn" data-car-id="carID10">Add to Favorites</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img">
+										<img src="images/fc11.png" alt="cars">
+									</div>
+									<div class="featured-model-info">
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+									<a href="#">DeLorean <span>DMC-12</a>
+										<button id="favorite-btn" class="favorite-btn" data-car-id="carID11">Add to Favorites</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img">
+										<img src="images/fc12.png" alt="cars">
+									</div>
+									<div class="featured-model-info">
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+								<a href="#">Mercedes-Benz <span>300SL</a>
+									<button id="favorite-btn" class="favorite-btn" data-car-id="carID12">Add to Favorites</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+								  <div class="featured-cars-img">
+									<img src="images/fc13.png" alt="cars">
+								  </div>
+								  <div class="featured-model-info"></div>
+								</div>
+								<div class="featured-cars-txt">
+								  <a href="#">BMW E24</a>
+								  <button id="favorite-btn" class="favorite-btn" data-car-id="carID13">Add to Favorites</button>
+								</div>
+							  </div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img">
+										<img src="images/fc14.png" alt="cars">
+									</div>
+									<div class="featured-model-info">
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+									<a href="#">Ferrari F40</span></a>
+									<button class="favorite-btn" data-car-id="carID14">Add to Favorites</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img">
+										<img src="images/fc15.png" alt="cars">
+									</div>
+									<div class="featured-model-info">
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+								<a href="#">Lamborghini Jarama</a>
+								<button class="favorite-btn" data-car-id="carID15">Add to Favorites</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img">
+										<img src="images/fc16.png" alt="cars">
+									</div>
+									<div class="featured-model-info">
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+									<a href="#">BMW E30 M3</a>
+									<button id="favorite-btn" class="favorite-btn" data-car-id="carID16">Add to Favorites</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+								  <div class="featured-cars-img">
+									<img src="images/fc17.png" alt="cars">
+								  </div>
+								  <div class="featured-model-info"></div>
+								</div>
+								<div class="featured-cars-txt">
+								  <a href="#">Rolls-Royce Camarague</a>
+								  <button id="favorite-btn" class="favorite-btn" data-car-id="carID17">Add to Favorites</button>
+								</div>
+							  </div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img">
+										<img src="images/fc18.png" alt="cars">
+									</div>
+									<div class="featured-model-info">
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+									<a href="#">Audi 80</span></a>
+									<button class="favorite-btn" data-car-id="carID18">Add to Favorites</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img">
+										<img src="images/fc19.png" alt="cars">
+									</div>
+									<div class="featured-model-info">
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+								<a href="#">Mercedes-Benz 380SL </a>
+								<button class="favorite-btn" data-car-id="carID19">Add to Favorites</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img">
+										<img src="images/fc20.png" alt="cars">
+									</div>
+									<div class="featured-model-info">
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+									<a href="#">Trabant</a>
+									<button id="favorite-btn" class="favorite-btn" data-car-id="carID20">Add to Favorites</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<footer class="site-footer">
+            <div class="footer-content">
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="index.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+						<li><a href="http://csac.ulbsibiu.ro">CSAC</a></li>
+						<li><a href="https://scanstart.ro">ScanStart</a></li>
+						<li><a href="https://graffino.com">Graffino</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="footer-copy">
+                    <p>&copy; 2024 Nostalgia Car Collection. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+	
+	<script type="module" src="addCars.js"></script>
+    <script type="module" src="style.js"></script>
+  
+</body>
+</html>

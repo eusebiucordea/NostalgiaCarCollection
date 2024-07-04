@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: url(images/backgr_login2.png) no-repeat top center;
+    background-size: cover;
+}
+
+/*Login container */
+
+.box-area{
+    width: 930px;
+}
+
+.custom-btn {
+    background-color: #c10f20; 
+    color: #fff; 
+}
+
+.right-box{
+    padding: 30px 30px 40px 40px;
+}
+
+::placeholder{
+    font-size: 16px;
+}
+
+.rounded-4{
+    border-radius: 20px;
+}
+.rounded-5{
+    border-radius: 30px;
+}
+
+
+
